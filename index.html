@@ -38,6 +38,50 @@
       </div>
     </div>
     <!-- Andy´s Section -->
+     <!-- Ana´s Section -->
+<section class="w-full py-12 bg-gray-800">
+  <h2 class="text-3xl text-center font-bold text-white mb-8">
+    Galería de Spike Lee
+  </h2>
+
+  <!-- Galería -->
+  <div id="gallery" class="flex gap-6 overflow-x-auto px-6 snap-x snap-mandatory">
+    <img src="/public/assets/images/malcolmx.webp" 
+         alt="Malcolm X" 
+         class="w-64 h-auto rounded-xl shadow-lg snap-center hover:scale-105 transition" />
+    <img src="/public/assets/images/hegotgame.webp" 
+         alt="He Got Game" 
+         class="w-64 h-auto rounded-xl shadow-lg snap-center hover:scale-105 transition" />
+    <img src="/public/assets/images/blackkklansman.webp" 
+         alt="BlacKkKlansman" 
+         class="w-64 h-auto rounded-xl shadow-lg snap-center hover:scale-105 transition" />
+    <img src="/public/assets/images/inside-man.webp" 
+         alt="Inside Man" 
+         class="w-64 h-auto rounded-xl shadow-lg snap-center hover:scale-105 transition" />
+  </div>
+
+  <!-- Botones de navegación -->
+  <div class="flex justify-center gap-4 mt-6">
+    <button onclick="scrollGallery(-300)" 
+            class="px-4 py-2 bg-red-500 text-white rounded-lg shadow hover:bg-red-600 transition">
+      ⬅️
+    </button>
+    <button onclick="scrollGallery(300)" 
+            class="px-4 py-2 bg-red-500 text-white rounded-lg shadow hover:bg-red-600 transition">
+      ➡️
+    </button>
+  </div>
+</section>
+<!-- Ana´s Section -->
+
+<script>
+  function scrollGallery(offset) {
+    document.getElementById('gallery').scrollBy({
+      left: offset,
+      behavior: 'smooth'
+    });
+  }
+</script>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
