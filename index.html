@@ -38,36 +38,44 @@
       </div>
     </div>
     <!-- Andy´s Section -->
-     <!-- Ana´s Section -->
+<!-- Ana´s Section -->
 <section class="w-full py-12 bg-gray-800">
   <h2 class="text-3xl text-center font-bold text-white mb-8">
-    Galería de Spike Lee
+    Interstellar (2014) - Directed by Christopher Nolan
   </h2>
 
+  <!-- Descripción -->
+  <div class="max-w-3xl mx-auto text-center px-4">
+    <p class="text-lg text-gray-300 mb-6">
+      A group of explorers embarks on the most important journey in the history of 
+      humankind: to travel beyond our galaxy in search of whether the stars can harbor a new home for the human race.
+    </p>
+  </div>
+
   <!-- Galería -->
-  <div id="gallery" class="flex gap-6 overflow-x-auto px-6 snap-x snap-mandatory">
-    <img src="/public/assets/images/malcolmx.webp" 
-         alt="Malcolm X" 
-         class="w-64 h-auto rounded-xl shadow-lg snap-center hover:scale-105 transition" />
-    <img src="/public/assets/images/hegotgame.webp" 
-         alt="He Got Game" 
-         class="w-64 h-auto rounded-xl shadow-lg snap-center hover:scale-105 transition" />
-    <img src="/public/assets/images/blackkklansman.webp" 
-         alt="BlacKkKlansman" 
-         class="w-64 h-auto rounded-xl shadow-lg snap-center hover:scale-105 transition" />
-    <img src="/public/assets/images/inside-man.webp" 
-         alt="Inside Man" 
-         class="w-64 h-auto rounded-xl shadow-lg snap-center hover:scale-105 transition" />
+  <div id="gallery-interstellar" class="flex gap-6 overflow-x-auto px-6 snap-x snap-mandatory">
+    <img src="/public/assets/images/interstellar1.jpg" 
+         alt="Interstellar - Espacio" 
+         class="w-72 h-auto rounded-xl shadow-lg snap-center hover:scale-105 transition" />
+    <img src="/public/assets/images/interstellar2.jpg" 
+         alt="Interstellar - Gargantúa" 
+         class="w-72 h-auto rounded-xl shadow-lg snap-center hover:scale-105 transition" />
+    <img src="/public/assets/images/interstellar3.jpg" 
+         alt="Interstellar - Endurance" 
+         class="w-72 h-auto rounded-xl shadow-lg snap-center hover:scale-105 transition" />
+    <img src="/public/assets/images/interstellar4.jpg" 
+         alt="Interstellar - Cooper" 
+         class="w-72 h-auto rounded-xl shadow-lg snap-center hover:scale-105 transition" />
   </div>
 
   <!-- Botones de navegación -->
   <div class="flex justify-center gap-4 mt-6">
-    <button onclick="scrollGallery(-300)" 
-            class="px-4 py-2 bg-red-500 text-white rounded-lg shadow hover:bg-red-600 transition">
+    <button onclick="scrollGallery('gallery-interstellar', -300)" 
+            class="px-4 py-2 bg-indigo-500 text-white rounded-lg shadow hover:bg-indigo-600 transition">
       ⬅️
     </button>
-    <button onclick="scrollGallery(300)" 
-            class="px-4 py-2 bg-red-500 text-white rounded-lg shadow hover:bg-red-600 transition">
+    <button onclick="scrollGallery('gallery-interstellar', 300)" 
+            class="px-4 py-2 bg-indigo-500 text-white rounded-lg shadow hover:bg-indigo-600 transition">
       ➡️
     </button>
   </div>
@@ -75,8 +83,8 @@
 <!-- Ana´s Section -->
 
 <script>
-  function scrollGallery(offset) {
-    document.getElementById('gallery').scrollBy({
+  function scrollGallery(id, offset) {
+    document.getElementById(id).scrollBy({
       left: offset,
       behavior: 'smooth'
     });
